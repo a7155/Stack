@@ -68,6 +68,7 @@ public class Main {
                 b_sum++;
             }
             data.push(dataBuku.get(i).keterangan);
+       
         }
 
         System.out.println("======================================================================================");
@@ -79,6 +80,8 @@ public class Main {
         System.out.println("Jumlah Buku Lawas : "+(dataBuku.size()-b_sum));
         System.out.println("Jumlah Buku Baru : "+b_sum);
         
+        boolean result = data.empty();
+        System.out.println("Is the stack empty? " + result);
         System.out.println("Stack item \t\t :" +data);
         data.pop();
         System.out.println("Stack after pop \t :" +data);
@@ -90,10 +93,8 @@ public class Main {
         data.remove(1);
         System.out.println("Stack item sebelum clear \t :" +data);
         data.clear();
-        System.out.println("Stack item setelah clear \t :" +data);
+        System.out.println("Stack item setelah clear \t :" +data); 
+          
         
-        for (String j : data) {
-            System.out.println("Stock Item \t :"+ j);
-        }
     }
 }
