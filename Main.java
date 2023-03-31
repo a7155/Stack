@@ -68,7 +68,6 @@ public class Main {
                 b_sum++;
             }
             data.push(dataBuku.get(i).keterangan);
-       
         }
 
         System.out.println("======================================================================================");
@@ -79,22 +78,27 @@ public class Main {
         System.out.println("Jumlah Buku Lainnya: "+l_sum);
         System.out.println("Jumlah Buku Lawas : "+(dataBuku.size()-b_sum));
         System.out.println("Jumlah Buku Baru : "+b_sum);
-        
-        boolean result = data.empty();
-        System.out.println("Is the stack empty? " + result);
+        System.out.println("======================================================================================");
+        System.out.println("                                       Stack                                          ");
+        System.out.println("======================================================================================");
+        for (String j : data) {
+            int i=0;
+            System.out.println("Stock Item \t : "+ j);
+        }
+        System.out.println("======================================================================================");
         System.out.println("Stack item \t\t :" +data);
+        System.out.println("Lihat index pertama \t :" +data.firstElement());
+        System.out.println("Lihat index terakhir \t :" +data.lastElement());
         data.pop();
         System.out.println("Stack after pop \t :" +data);
         System.out.println("Pick \t\t\t :" +data.peek());
-        System.out.println("Cek Apakah Kosong? \t :" +data);
-        System.out.println("Lihat index ke 2 \t:" +data.get(1));
-        System.out.println("Lihat index pertama \t :" +data.firstElement());
-        System.out.println("Lihat index terakhir \t :" +data.lastElement());
-        data.remove(1);
+        System.out.println("Cek Apakah Kosong? \t :" +data.isEmpty());
+        System.out.println("Lihat index ke 2 \t :" +data.get(1));
+        System.out.println("Hapus index ke 2 \t :" +data.remove(1));
         System.out.println("Stack item sebelum clear \t :" +data);
         data.clear();
-        System.out.println("Stack item setelah clear \t :" +data); 
-          
+        System.out.println("Stack item setelah clear \t :" +data);
+        System.out.println("Cek Apakah Kosong? \t :" +data.isEmpty());
         
     }
 }
